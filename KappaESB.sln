@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F29F57FE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.AspNetCore", "KappaESB.AspNetCore\KappaESB.AspNetCore.csproj", "{BA015D4F-77B7-4C41-ADD0-FC25C369673D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.MainBuilder", "KappaESB.MainBuilder\KappaESB.MainBuilder.csproj", "{2C758285-2E66-47C4-927C-D926BCE6A56E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.Core", "KappaESB.Core\KappaESB.Core.csproj", "{2C758285-2E66-47C4-927C-D926BCE6A56E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

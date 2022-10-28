@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\KappaESB.Interfaces\KappaESB.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Endpoints\" />
+    <Folder Include="Methods\" />
   </ItemGroup>
 
 </Project>

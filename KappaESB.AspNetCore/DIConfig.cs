@@ -1,9 +1,4 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KappaESB.AspNetCore
 {
@@ -11,7 +6,9 @@ namespace KappaESB.AspNetCore
     {
         public static IApplicationBuilder MapESBRoutes(this IApplicationBuilder app, RouteMapper mapper)
         {
-            app.Map();
+            app.UseEndpoints(endpoints => { 
+            
+            });
             return app;
         }
     }

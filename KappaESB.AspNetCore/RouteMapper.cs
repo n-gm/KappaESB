@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace KappaESB.AspNetCore
 {
-    internal class RouteMapper
+    public class RouteMapper
     {
+
     }
 }
