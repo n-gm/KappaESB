@@ -1,0 +1,7 @@
+/*.dockerignore
+DesignTimeBuild
+v17
+FileContentIndex
+ProjectEvaluation
+obj
+/KappaESB/*.user
