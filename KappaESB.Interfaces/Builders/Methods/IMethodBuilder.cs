@@ -1,16 +1,29 @@
 ﻿using KappaESB.Classes;
+using KappaESB.Classes.Common;
 using KappaESB.Classes.Requests;
-using KappaESB.Interfaces.Endpoint;
+using KappaESB.Interfaces.Builders.Endpoints;
 
-namespace KappaESB.Interfaces.Method
+namespace KappaESB.Interfaces.Builders.Methods
 {
     public interface IMethodBuilder
     {
         /// <summary>
+        /// Method version. Used to make correct http route and support old APIs. Default value - 1.
+        /// </summary>
+        /// <param name="versionNumber"></param>
+        /// <returns></returns>
+        IMethodBuilder Version(int versionNumber);
+        /// <summary>
+        /// Delivery mode. Use it for reliable delivery. Default value - TwoWayTransient.
+        /// </summary>
+        /// <param name="mode"></param>
+        /// <returns></returns>
+        IMethodBuilder DeliveryMode(DeliveryMode mode);
+        /// <summary>
         /// Start configuring endpoints
         /// </summary>
         /// <returns></returns>
-        IEndpointBuilder<Transfer> Begin();
+        IEndpointBuilder<TransferInfo> Begin();
         /// <summary>
         /// HTTP type of method
         /// </summary>

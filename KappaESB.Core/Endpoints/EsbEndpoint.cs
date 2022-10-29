@@ -1,16 +1,17 @@
-﻿using KappaESB.Interfaces.Common;
+﻿using KappaESB.Interfaces.Processors;
 
-namespace KappaESB.MainBuilder.Endpoints
+namespace KappaESB.Core.Endpoints
 {
-    internal class EsbEndpoint : INamedBuilder
+    internal abstract class EsbEndpoint<Request, Response> : EsbEndpointBase, IEndpoint<Request, Response>
+        where Request : class
+        where Response : class
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-
         public EsbEndpoint(string name, string description)
+            : base(name, description)
         {
-            Name = name;
-            Description = description;
+
         }
+
+        public abstract Task<Response> ProcessMessageAsync(Request message);
     }
 }

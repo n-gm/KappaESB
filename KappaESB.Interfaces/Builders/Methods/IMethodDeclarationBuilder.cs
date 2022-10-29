@@ -1,4 +1,4 @@
-﻿namespace KappaESB.Interfaces.Method
+﻿namespace KappaESB.Interfaces.Builders.Methods
 {
     public interface IMethodDeclarationBuilder
     {
@@ -8,6 +8,6 @@
         /// <param name="controllerName">Controller name</param>
         /// <param name="methodName">Method name</param>
         /// <returns></returns>
-        IMethodBuilder DeclareMethod(string controllerName, string methodName);
+        IMethodBuilder DeclareMethod(string controllerName, string methodName, string controllerDescription = "", string methodDescription = "");
     }
 }

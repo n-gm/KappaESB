@@ -1,13 +1,13 @@
 ﻿using KappaESB.Interfaces.Common;
 
-namespace KappaESB.MainBuilder.Controllers
+namespace KappaESB.Core.Controllers
 {
-    internal class EsbController : INamedBuilder
+    internal class EsbController : INamedEntity
     {
         private List<string> _methods;
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public IEnumerable<string> Methods => _methods;
+        public IReadOnlyList<string> Methods => _methods;
 
         /// <summary>
         /// Controller is used for grouping methods
