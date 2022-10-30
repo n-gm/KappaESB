@@ -25,6 +25,12 @@ namespace KappaESB.Interfaces.Builders.Methods
         /// <returns></returns>
         IEndpointBuilder<TransferInfo> Begin();
         /// <summary>
+        /// Start configuring endpoints with incoming data
+        /// </summary>
+        /// <typeparam name="Request">Type of request body</typeparam>
+        /// <returns></returns>
+        IEndpointBuilder<Request> Begin<Request>() where Request : class;
+        /// <summary>
         /// HTTP type of method
         /// </summary>
         /// <param name="type"></param>
