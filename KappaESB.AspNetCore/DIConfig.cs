@@ -13,7 +13,7 @@ namespace KappaESB.AspNetCore
 
             //Map config to ASP.Net Core endpoints
             app.UseEndpoints(endpoints => { 
-            
+                endpoints.Map()
             });
             return app;
         }

@@ -20,10 +20,10 @@ namespace KappaESB.Interfaces.Builders.Methods
         /// <returns></returns>
         IMethodBuilder DeliveryMode(DeliveryMode mode);
         /// <summary>
-        /// Start configuring endpoints
+        /// Start configuring endpoints.
         /// </summary>
         /// <returns></returns>
-        IEndpointBuilder<TransferInfo> Begin();
+        IEndpointBuilder<EmptyRequest> Begin();
         /// <summary>
         /// Start configuring endpoints with incoming data
         /// </summary>
@@ -66,5 +66,17 @@ namespace KappaESB.Interfaces.Builders.Methods
         /// <param name="type"></param>
         /// <returns></returns>
         IMethodBuilder ResponseDtoType(Type type);
+        /// <summary>
+        /// Set Content-Type. All other content types will be rejected with 415 Unsupported Media Type
+        /// </summary>
+        /// <param name="contentType"></param>
+        /// <returns></returns>
+        IMethodBuilder RestrictRequestContentType(string contentType);
+        /// <summary>
+        /// Set response content type
+        /// </summary>
+        /// <param name="contentType"></param>
+        /// <returns></returns>
+        IMethodBuilder ResponseContentType(string contentType);
     }
 }
