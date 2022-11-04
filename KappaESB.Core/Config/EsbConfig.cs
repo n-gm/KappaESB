@@ -1,14 +1,30 @@
-﻿namespace KappaESB.Core.Config
+﻿using KappaESB.Core.Interfaces;
+using KappaESB.Interfaces.Builders.Controllers;
+
+namespace KappaESB.Core.Config
 {
-    public class EsbConfig
+    internal class EsbConfig : IEsbConfig
     {
-        /// <summary>
-        /// Type of queue that is used to provide connection between endpoints
-        /// </summary>
+        private IControllerBuilder _controllerBuilder;
         public QueueType BusQueueType { get; set; }
-        /// <summary>
-        /// Connection string to connect to queue. Not used for internal queue
-        /// </summary>
         public string? QueueConnectionString { get; set; }
+
+        public IEsbConfig AddRouteConfiguration<ConfigurationType>() where ConfigurationType : IRouteConfiguration, new()
+        {
+            var config = new ConfigurationType();
+            return AddRouteConfiguration(config);
+        }
+
+        public IEsbConfig AddRouteConfiguration(IRouteConfiguration config)
+        {
+            config.Configure(_controllerBuilder);
+            return this;
+        }
+
+        public IEsbConfig AddRouteConfiguration(Action<IControllerBuilder> builder)
+        {
+            builder?.Invoke(_controllerBuilder);
+            return this;
+        }
     }
 }

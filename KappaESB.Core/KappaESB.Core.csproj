@@ -10,8 +10,4 @@
     <ProjectReference Include="..\KappaESB.Interfaces\KappaESB.Interfaces.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Endpoints\" />
-  </ItemGroup>
-
 </Project>

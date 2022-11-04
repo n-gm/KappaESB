@@ -1,7 +1,4 @@
-﻿using KappaESB.Interfaces.Common;
-using KappaESB.Interfaces.Processors;
-
-namespace KappaESB.Core.Endpoints
+﻿namespace KappaESB.Core.Endpoints
 {
     internal abstract class EsbEndpointBase
     {

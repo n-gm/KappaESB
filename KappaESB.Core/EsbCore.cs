@@ -1,8 +1,6 @@
 ﻿using KappaESB.Classes;
 using KappaESB.Core.Methods;
 using KappaESB.Core.Controllers;
-using KappaESB.Core.Endpoints;
-using KappaESB.Core.Methods;
 using System.Collections.Concurrent;
 
 namespace KappaESB.Core

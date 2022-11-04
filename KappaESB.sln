@@ -5,19 +5,15 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB", "KappaESB\KappaESB.csproj", "{F7FB79DD-675C-4DEC-ACE5-9FF3B2420B8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.ControllerBuilder", "KappaESB.ControllerBuilder\KappaESB.ControllerBuilder.csproj", "{12A5C549-FB9B-4A22-A2E7-1B25F2FDCC58}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.MethodBuilder", "KappaESB.MethodBuilder\KappaESB.MethodBuilder.csproj", "{A03536C6-F1E2-43CA-8A88-8F4DAB5A1409}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.Interfaces", "KappaESB.Interfaces\KappaESB.Interfaces.csproj", "{0956C200-F06C-42C6-8494-AB2ED08D9978}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.Classes", "KappaESB.Classes\KappaESB.Classes.csproj", "{C06B03A6-1FB4-4070-B3EA-CA980EAB7354}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F29F57FE-7FAA-4E5B-9CE5-58DC0BF763F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.AspNetCore", "KappaESB.AspNetCore\KappaESB.AspNetCore.csproj", "{BA015D4F-77B7-4C41-ADD0-FC25C369673D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.AspNetCore", "KappaESB.AspNetCore\KappaESB.AspNetCore.csproj", "{BA015D4F-77B7-4C41-ADD0-FC25C369673D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.Core", "KappaESB.Core\KappaESB.Core.csproj", "{2C758285-2E66-47C4-927C-D926BCE6A56E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.Core", "KappaESB.Core\KappaESB.Core.csproj", "{2C758285-2E66-47C4-927C-D926BCE6A56E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +25,6 @@ Global
 		{F7FB79DD-675C-4DEC-ACE5-9FF3B2420B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7FB79DD-675C-4DEC-ACE5-9FF3B2420B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7FB79DD-675C-4DEC-ACE5-9FF3B2420B8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12A5C549-FB9B-4A22-A2E7-1B25F2FDCC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12A5C549-FB9B-4A22-A2E7-1B25F2FDCC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12A5C549-FB9B-4A22-A2E7-1B25F2FDCC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12A5C549-FB9B-4A22-A2E7-1B25F2FDCC58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A03536C6-F1E2-43CA-8A88-8F4DAB5A1409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A03536C6-F1E2-43CA-8A88-8F4DAB5A1409}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A03536C6-F1E2-43CA-8A88-8F4DAB5A1409}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A03536C6-F1E2-43CA-8A88-8F4DAB5A1409}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0956C200-F06C-42C6-8494-AB2ED08D9978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0956C200-F06C-42C6-8494-AB2ED08D9978}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0956C200-F06C-42C6-8494-AB2ED08D9978}.Release|Any CPU.ActiveCfg = Release|Any CPU
