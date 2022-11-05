@@ -1,7 +1,9 @@
 ﻿using KappaESB.Classes;
 using KappaESB.Classes.Common;
 using KappaESB.Classes.Requests;
+using KappaESB.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 
 namespace KappaESB.AspNetCore.Delegates
@@ -70,6 +72,9 @@ namespace KappaESB.AspNetCore.Delegates
                     return;
                 }
             }
+
+            IEsbCore core = context.RequestServices.GetService<IEsbCore>()!;
+            await core.ProcessMessageAsync(transfer);
         }
 
         #region Private

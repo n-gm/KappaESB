@@ -1,9 +1,10 @@
 ﻿using KappaESB.Classes;
 using KappaESB.Core.Controllers;
+using KappaESB.Core.Interfaces;
 
 namespace KappaESB.Core
 {
-    internal class EsbCore
+    internal class EsbCore : IEsbCore
     {
         private Dictionary<string, EsbController> _controllers;
 
