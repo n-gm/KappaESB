@@ -1,5 +1,5 @@
 ﻿using KappaESB.Core.Config;
-using KappaESB.Interfaces.Builders.Controllers;
+using KappaESB.Interfaces.Builders.Core;
 
 namespace KappaESB.Core.Interfaces
 {
@@ -35,6 +35,6 @@ namespace KappaESB.Core.Interfaces
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
-        IEsbConfig AddRouteConfiguration(Action<IControllerBuilder> builder);
+        IEsbConfig AddRouteConfiguration(Action<IEsbBuilder> builder);
     }
 }

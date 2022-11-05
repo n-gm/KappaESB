@@ -5,6 +5,6 @@ namespace KappaESB.Interfaces.Builders.Controllers
 {
     public interface IControllerBuilder : INamedEntity
     {
-        public IMethodBuilder DeclareMethod(string methodName, string methodDescription = "");
+        public IMethodBuilder DeclareMethod(string methodName, string methodDescription = "", int version = 1);
     }
 }

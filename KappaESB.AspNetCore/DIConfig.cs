@@ -17,8 +17,7 @@ namespace KappaESB.AspNetCore
         {
             //Create config and apply user routes
             IEsbConfig routeConfig = IEsbConfig.Create();
-            config.Invoke(routeConfig);
-            
+            config.Invoke(routeConfig);            
 
             //Map config to ASP.Net Core endpoints
             app.UseEndpoints(endpoints => { 

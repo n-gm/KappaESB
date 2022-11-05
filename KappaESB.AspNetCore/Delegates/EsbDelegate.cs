@@ -74,6 +74,7 @@ namespace KappaESB.AspNetCore.Delegates
             }
 
             IEsbCore core = context.RequestServices.GetService<IEsbCore>()!;
+            //Send message to bus
             await core.ProcessMessageAsync(transfer);
         }
 

@@ -1,16 +1,16 @@
 ﻿namespace KappaESB.Classes.Requests
 {
     /// <summary>
-    /// Информация по запросу
+    /// Request data
     /// </summary>
     public class RequestData
     {
         /// <summary>
-        /// Тип запроса
+        /// Request type
         /// </summary>
         public RequestType RequestType { get; set; }
         /// <summary>
-        /// Параметры, передаваемые в строке адреса
+        /// Request parameters from query
         /// </summary>
         public List<KeyValuePair<string,string>> Params { get; set; } = new List<KeyValuePair<string, string>>();        
     }

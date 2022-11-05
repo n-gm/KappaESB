@@ -1,11 +1,12 @@
-﻿using KappaESB.Core.Interfaces;
-using KappaESB.Interfaces.Builders.Controllers;
+﻿using KappaESB.Core.Builders;
+using KappaESB.Core.Interfaces;
+using KappaESB.Interfaces.Builders.Core;
 
 namespace KappaESB.Core.Config
 {
     internal class EsbConfig : IEsbConfig
     {
-        
+        private IEsbBuilder _esb = new EsbBuilder();
         public QueueType BusQueueType { get; set; }
         public string? QueueConnectionString { get; set; }
 
@@ -17,13 +18,13 @@ namespace KappaESB.Core.Config
 
         public IEsbConfig AddRouteConfiguration(IRouteConfiguration config)
         {
-            config.Configure(_controllerBuilder);
+            config.Configure(_esb);
             return this;
         }
 
-        public IEsbConfig AddRouteConfiguration(Action<IControllerBuilder> builder)
+        public IEsbConfig AddRouteConfiguration(Action<IEsbBuilder> builder)
         {
-            builder?.Invoke(_controllerBuilder);
+            builder?.Invoke(_esb);
             return this;
         }
     }

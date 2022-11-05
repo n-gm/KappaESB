@@ -8,7 +8,6 @@ namespace KappaESB.Core.Controllers
         private List<string> _methods;
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public IReadOnlyList<string> Methods => _methods;
 
         /// <summary>
         /// Controller is used for grouping methods
@@ -19,7 +18,6 @@ namespace KappaESB.Core.Controllers
         {
             Name = name;
             Description = description;
-            _methods = new List<string>();
         }
     }
 }
