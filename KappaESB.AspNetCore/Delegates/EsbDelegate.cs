@@ -1,5 +1,11 @@
-﻿using KappaESB.Classes.Requests;
+﻿using KappaESB.Classes;
+using KappaESB.Classes.Common;
+using KappaESB.Classes.Requests;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace KappaESB.AspNetCore.Delegates
 {
@@ -46,10 +52,26 @@ namespace KappaESB.AspNetCore.Delegates
         public async Task RequestDelegate(HttpContext context)
         {
             //If Request Content-Type do not equals to content-type from config return 415
-            if (!string.IsNullOrWhiteSpace(RequestContentType) && !CheckRequestContentType(context.Request.ContentType ?? ""))
+            if (!string.IsNullOrWhiteSpace(RequestContentType) 
+                && !CheckRequestContentType(context.Request.ContentType ?? ""))
             {
-                context.Response.Clear();
-                context.Response.StatusCode = 415;
+                ReturnError(context, 415);
+                return;
+            }
+
+            var transfer = new Transfer<RequestBody>();
+
+            //If information expected in request's body
+            if (typeof(RequestBody) != typeof(EmptyRequest))
+            {
+                try
+                {
+                    var data = JsonSerializer.Deserialize<RequestBody>(context.Request.Body);
+                } catch
+                {
+                    ReturnError(context, 400);
+                    return;
+                }
             }
         }
 
@@ -57,6 +79,12 @@ namespace KappaESB.AspNetCore.Delegates
         private bool CheckRequestContentType(string requestContentType)
         {
             return requestContentType.Equals(RequestContentType, StringComparison.OrdinalIgnoreCase);
+        }
+
+        private void ReturnError(HttpContext context, int errorCode)
+        {
+            context.Response.Clear();
+            context.Response.StatusCode = errorCode;            
         }
         #endregion
     }

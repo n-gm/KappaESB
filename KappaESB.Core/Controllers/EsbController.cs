@@ -1,4 +1,5 @@
-﻿using KappaESB.Interfaces.Common;
+﻿using KappaESB.Interfaces.Builders.Controllers;
+using KappaESB.Interfaces.Common;
 
 namespace KappaESB.Core.Controllers
 {
@@ -19,15 +20,6 @@ namespace KappaESB.Core.Controllers
             Name = name;
             Description = description;
             _methods = new List<string>();
-        }
-
-        /// <summary>
-        /// Add method to controller
-        /// </summary>
-        /// <param name="methodName"></param>
-        public void AddMethod(string methodName)
-        {
-            _methods.Add(methodName);
         }
     }
 }

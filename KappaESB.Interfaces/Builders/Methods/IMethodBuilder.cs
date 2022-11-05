@@ -78,5 +78,11 @@ namespace KappaESB.Interfaces.Builders.Methods
         /// <param name="contentType"></param>
         /// <returns></returns>
         IMethodBuilder ResponseContentType(string contentType);
+        /// <summary>
+        /// Declare parameter that is expected in query string
+        /// </summary>
+        /// <param name="parameterName"></param>
+        /// <returns></returns>
+        IMethodBuilder ExpectQueryParameter(string parameterName);
     }
 }

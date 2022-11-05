@@ -5,7 +5,7 @@ namespace KappaESB.Core.Config
 {
     internal class EsbConfig : IEsbConfig
     {
-        private IControllerBuilder _controllerBuilder;
+        
         public QueueType BusQueueType { get; set; }
         public string? QueueConnectionString { get; set; }
 

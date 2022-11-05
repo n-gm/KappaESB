@@ -12,10 +12,6 @@
         /// <summary>
         /// Параметры, передаваемые в строке адреса
         /// </summary>
-        public string[] Params { get; set; }
-        /// <summary>
-        /// Параметры, передаваемые в теле запроса
-        /// </summary>
-        public object DTO { get; set; }
+        public List<KeyValuePair<string,string>> Params { get; set; } = new List<KeyValuePair<string, string>>();        
     }
 }
