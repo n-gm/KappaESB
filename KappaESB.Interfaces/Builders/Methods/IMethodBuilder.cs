@@ -12,7 +12,7 @@ namespace KappaESB.Interfaces.Builders.Methods
         /// </summary>
         /// <param name="mode"></param>
         /// <returns></returns>
-        IMethodBuilder DeliveryMode(DeliveryMode mode);
+        IMethodBuilder MethodDeliveryMode(DeliveryMode mode);
         /// <summary>
         /// Start configuring endpoints.
         /// </summary>

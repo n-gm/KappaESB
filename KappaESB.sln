@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.AspNetCore", "Kapp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.Core", "KappaESB.Core\KappaESB.Core.csproj", "{2C758285-2E66-47C4-927C-D926BCE6A56E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.Endpoint", "KappaESB.Endpoint\KappaESB.Endpoint.csproj", "{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.EndpointCluster", "KappaESB.EndpointCluster\KappaESB.EndpointCluster.csproj", "{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{2C758285-2E66-47C4-927C-D926BCE6A56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C758285-2E66-47C4-927C-D926BCE6A56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C758285-2E66-47C4-927C-D926BCE6A56E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

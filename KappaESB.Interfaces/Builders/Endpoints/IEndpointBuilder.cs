@@ -1,9 +1,10 @@
 ﻿using KappaESB.Classes;
+using KappaESB.Interfaces.Common;
 using KappaESB.Interfaces.Processors;
 
 namespace KappaESB.Interfaces.Builders.Endpoints
 {
-    public interface IEndpointBuilder<Request> where Request : class                    
+    public interface IEndpointBuilder<Request> : INamedEntity where Request : class                    
     {
         /// <summary>
         /// Route message to endpoint by name. Can be used only if endpoint with endpointName was declared.
@@ -66,7 +67,7 @@ namespace KappaESB.Interfaces.Builders.Endpoints
         /// <returns></returns>
         IEndpointBuilder<Request> If(Func<Request, bool> condition);
         IEndpointBuilder<Request> ElseIf(Func<Request, bool> condition);
-        IEndpointBuilder<Request> Else(Func<Request, bool> condition);
+        IEndpointBuilder<Request> Else();
         IEndpointBuilder<Request> EndIf();
     }
 }
