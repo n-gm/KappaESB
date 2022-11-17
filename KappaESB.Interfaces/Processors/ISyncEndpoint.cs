@@ -1,4 +1,5 @@
-﻿using KappaESB.Interfaces.Common;
+﻿using KappaESB.Classes;
+using KappaESB.Interfaces.Common;
 
 namespace KappaESB.Interfaces.Processors
 {
@@ -6,6 +7,6 @@ namespace KappaESB.Interfaces.Processors
         where Response : class
         where Request : class
     {
-        Response ProcessMessage(Request message);
+        Response ProcessMessage(Transfer<Request> message);
     }
 }

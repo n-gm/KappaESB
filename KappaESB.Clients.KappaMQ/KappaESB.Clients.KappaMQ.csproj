@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KappaESB.Endpoint\KappaESB.Endpoints.csproj" />
     <ProjectReference Include="..\KappaESB.Interfaces\KappaESB.Interfaces.csproj" />
   </ItemGroup>
 

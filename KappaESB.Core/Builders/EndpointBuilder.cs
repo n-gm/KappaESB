@@ -1,4 +1,5 @@
 ﻿using KappaESB.Classes;
+using KappaESB.Core.Endpoints;
 using KappaESB.Interfaces.Builders.Endpoints;
 using KappaESB.Interfaces.Processors;
 
@@ -14,35 +15,16 @@ namespace KappaESB.Core.Builders
 
     internal class EndpointBuilder<Request> : EndpointBuilderBase, IEndpointBuilder<Request> where Request : class
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public Func<Transfer<Request>, object> Processor { get; set; }        
-        public EndpointBuilderBase Next { get; private set; }
+        private readonly EndpointList _endpoints;
 
-        public EndpointBuilder() {
-        }
-
-        public override object Perform(TransferInfo request)
-        {
-            if (!(request is Transfer<Request> typedRequest))
-            {
-
-            }
-
-            switch (EndpointType)
-            {
-                case EndpointType.Processor:
-                case EndpointType.Convertor:
-                    return Processor?.Invoke(typedRequest);
-            }
+        public EndpointBuilder(EndpointList endpoints) {
+            _endpoints = endpoints;
         }
 
         public IEndpointBuilder<Response> Convert<Response>(Func<Transfer<Request>, Response> func) where Response : class
         {
             EndpointType = EndpointType.Convertor;
-            Processor = func;
-            var result = new EndpointBuilder<Response>();
-            Next = result;
+            var result = new EndpointBuilder<Response>(_endpoints);
             return result;
         }
 

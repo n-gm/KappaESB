@@ -6,6 +6,6 @@ namespace KappaESB.Classes
     {
         public Guid RouteId { get; set; }
         public TransferMetadata Metadata { get; set; }
-        public RequestData Request { get; set; }
+        public RequestData Request { get; set; }        
     }
 }

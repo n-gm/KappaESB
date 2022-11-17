@@ -1,11 +1,11 @@
-﻿namespace KappaESB.Core.Endpoints
+﻿namespace KappaESB.Endpoints
 {
-    internal abstract class EsbEndpointBase
+    public abstract class EndpointBase
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
 
-        public EsbEndpointBase(string name, string description)
+        public EndpointBase(string name, string description)
         {
             Name = name;
             Description = description;

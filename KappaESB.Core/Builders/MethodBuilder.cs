@@ -1,5 +1,6 @@
 ﻿using KappaESB.Classes.Common;
 using KappaESB.Classes.Requests;
+using KappaESB.Core.Endpoints;
 using KappaESB.Interfaces.Builders.Endpoints;
 using KappaESB.Interfaces.Builders.Methods;
 
@@ -7,6 +8,7 @@ namespace KappaESB.Core.Builders
 {
     internal class MethodBuilder : IMethodBuilder
     {
+        public EndpointList Endpoints { get; private set; }
         public string RequestBodyContentType { get; private set; }
         public string ResponseBodyContentType { get; private set; }
         public Type RequestBodyType { get; private set; }
@@ -24,6 +26,7 @@ namespace KappaESB.Core.Builders
             Name = name;
             Description = description ?? string.Empty;
             Version = version;
+            Endpoints = new();
         }
 
         public IEndpointBuilder<EmptyRequest> Begin()

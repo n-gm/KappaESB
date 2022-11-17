@@ -15,9 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.AspNetCore", "Kapp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.Core", "KappaESB.Core\KappaESB.Core.csproj", "{2C758285-2E66-47C4-927C-D926BCE6A56E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.Endpoint", "KappaESB.Endpoint\KappaESB.Endpoint.csproj", "{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.Endpoints", "KappaESB.Endpoint\KappaESB.Endpoints.csproj", "{0D5A94F8-D00C-4D0D-AB1A-9D51B3D043D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.EndpointCluster", "KappaESB.EndpointCluster\KappaESB.EndpointCluster.csproj", "{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappaESB.EndpointCluster", "KappaESB.EndpointCluster\KappaESB.EndpointCluster.csproj", "{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{FA97030B-A8FD-43B3-9BCF-1C6FD5FA6048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.Clients.RabbitMQ", "KappaESB.Clients.RabbitMQ\KappaESB.Clients.RabbitMQ.csproj", "{C5160767-640B-40A3-9D75-3D295B60FD8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappaESB.Clients.KappaMQ", "KappaESB.Clients.KappaMQ\KappaESB.Clients.KappaMQ.csproj", "{0076F384-869E-4430-BA13-1D2D81C8118E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,9 +59,21 @@ Global
 		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8224F52-D0BA-4E0E-A291-6099EC5B11FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5160767-640B-40A3-9D75-3D295B60FD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5160767-640B-40A3-9D75-3D295B60FD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5160767-640B-40A3-9D75-3D295B60FD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5160767-640B-40A3-9D75-3D295B60FD8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0076F384-869E-4430-BA13-1D2D81C8118E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0076F384-869E-4430-BA13-1D2D81C8118E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0076F384-869E-4430-BA13-1D2D81C8118E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0076F384-869E-4430-BA13-1D2D81C8118E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5160767-640B-40A3-9D75-3D295B60FD8F} = {FA97030B-A8FD-43B3-9BCF-1C6FD5FA6048}
+		{0076F384-869E-4430-BA13-1D2D81C8118E} = {FA97030B-A8FD-43B3-9BCF-1C6FD5FA6048}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46199E2E-4C97-4FDC-8605-F5C8063BEB66}
