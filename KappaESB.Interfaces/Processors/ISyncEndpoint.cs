@@ -3,7 +3,7 @@ using KappaESB.Interfaces.Common;
 
 namespace KappaESB.Interfaces.Processors
 {
-    public interface ISyncEndpoint<Request, Response> : INamedEntity
+    public interface ISyncEndpoint<Request, Response> : INamedEntity, IDisposable
         where Response : class
         where Request : class
     {

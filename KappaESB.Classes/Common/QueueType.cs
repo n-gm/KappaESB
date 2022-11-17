@@ -1,8 +1,8 @@
-﻿namespace KappaESB.Core.Config
+﻿namespace KappaESB.Classes.Common
 {
     public enum QueueType
     {
         RabbitMQ,
-        Internal
+        KappaMQ
     }
 }

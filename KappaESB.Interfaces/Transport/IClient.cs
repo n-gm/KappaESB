@@ -9,14 +9,20 @@ namespace KappaESB.Interfaces.Transport
         ReturnToEndOfQueue
     }
 
-    public interface IClient<Request, Response>
+    public interface IClient<Request, Response> : IDisposable
         where Request : class
         where Response : class
     {
+        string QueueName { get; }
+        /// <summary>
+        /// Connect to server
+        /// </summary>
+        void Connect(string connectionString);
+        void Disconnect();
         /// <summary>
         /// Message received event. For push-based logic.
         /// </summary>
-        Func<Transfer<Request>> OnMessage { get; set; }
+        Func<string, Transfer<Request>, Task> OnMessage { get; set; }
         /// <summary>
         /// Get next message in queue. For pull-based logic.
         /// </summary>
